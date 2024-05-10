@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Pacifico&family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="red-dice-with-transparent-background-gambling-and-gaming-png.webp"  type="image/x-icon">
+    <!-- css -->
+    <style>
+        body{
+            @font-face {
+                font-family: new;
+                src: url(pincoyablack.otf);
+            }
+            padding-top: 5rem;
+           background-image: linear-gradient(
+           aqua,
+          rgb(0, 89, 255)
+            )}
+            .h1{
+                font-family: "Rye", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        .but{
+            padding: 10px;
+            background-color: whitesmoke;
+            color: black;
+            border-radius: 5px;
+            border-color: red;
+            width: 200;
+            height: 200;
+        }
+        .box{
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            border-color: red;
+            color: RED;
+
+        }
+        .end{
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+            .box1{
+                font-family: "Fjalla One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+}
+
+        
+    </style>
+    <title>Dice Game</title>
+</head>
+<body>
+    <!-- heading -->
+    <h1 style="color: whitesmoke;" class="h1"><center>GAME OF DICE &emsp;<img src="red-dice-with-transparent-background-gambling-and-gaming-png.webp" width="120" height="100"></img></center></h1>
+    &emsp;
+    &emsp;
+    <!-- mid part -->
+    <center><p style="color: whitesmoke;" class="box1">PLAYER 1</p><input id="temp1"class="box" type="number" placeholder="NUMBER IS" value="personval1" ></center>
+<br>
+        &emsp; &emsp;
+    <center><p style="color: whitesmoke;" class="box1">PLAYER 2</p><input id="temp2" type="number" placeholder="NUMBER IS" value="" class="box"></center>
+    &emsp;
+    <!-- info -->
+    <center><input type="button" class="but"  name="roll" id="nk" placeholder="roll" value="&#x2684;" onclick="findnumber()" ></center>
+    <p class="box1">Rules:<br>&#x2684;Both Player 1 and Player 2 will get chance to roll the dice.<br>&#x2684;In each Round The Total will Get added. <br>&#x2684;Player to reach 50 Point wins</p>
+<!-- disclameer -->
+    <p class="end">This is a Practice Website Created by Engineering Students to Leverage Thier skills in the Current Technologies Like HTML, Css, JavaScript, and have Been Created During Certification Cource, No copyright Infringment Required, All Rights Reserved to respectful Owners.</p>
+    <p class="end">Nihal Karkera&nbsp; |B Section AIML&nbsp;| <a href="https://github.com/nihalkarkeraa" class="end">nihalkarkeraa</a> </p>
+
+
+
+
+
+<!-- js -->
+    <script>
+    let person1=0;
+    let person2=0;
+    let personval1=0;
+    let personval2=0;
+    var temp1=0;
+    var temp2=0;
+    
+        function findnumber()
+        {
+            // first guy
+        var guess=Math.floor(Math.random()*6)+1
+           if(personval1<=50)
+           personval1=guess
+           alert("the value is "+personval1);
+        //    person1++
+
+           temp1+=personval1
+           alert("total value person1 is "+temp1)
+           document.getElementById('temp1').value = temp1;
+// second guy
+           var guess=Math.floor(Math.random()*6)+1
+           if(personval2<=50)
+           {
+            personval2=guess
+            alert("the value of the person 2 is "+personval2)
+            person2++
+            temp2+=personval2
+            alert("total value person2 is "+temp2)
+            document.getElementById('temp2').value = temp2;
+
+
+           }
+           
+          
+           
+                
+            
+        }
+    </script>
+    
+</body>
+</html>
